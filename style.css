@@ -1,0 +1,301 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(24, 23, 23);
+    
+}
+:root{
+    --navbar-height: 1rem;
+}
+
+#logo img{
+    width: 3rem;
+    justify-content: center;
+    align-items: center;  
+    filter: brightness(0) invert(1);
+    margin: 1rem 1.8rem;  
+}
+.heading3 img{
+    /* justify-content: center;
+    align-items: center; */
+    width: 3rem;
+    /* margin: rem 14rem; */
+    /* padding: 12rem; */
+    /* margin-left: 1rem;*/
+    padding: 1.5rem ; 
+    /* padding-bottom: 8rem; */
+    /* margin-bottom: 6rem; */
+    filter: brightness(0) invert(1);
+    /* display: flex; */
+}
+ul{
+    display: flex;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: sticky;
+}
+#navbar::before{
+    position: absolute;
+    background-color: rgb(46, 43, 43);
+    content: "";
+    top: 0rem;
+    left: 0rem;
+    z-index: -1;
+    height: 5.3rem;
+    width: 84rem;
+    opacity: 0.5;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+#navbar ul li a{
+    padding: 0.4rem 0.4rem;
+    margin: 2rem 2rem;
+    /* margin-bottom: 5rem; */
+    border-radius: 2rem;
+    display: block;
+    color: rgba(255, 255, 255, 0.651);
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: whitesmoke;
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+#home{
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 7rem;
+    margin-right: 30rem;
+    color: rgba(255, 255, 255, 0.815);
+}
+#home::before{
+    background: url("/back.jpg") no-repeat center center/cover;
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    opacity: 0.95;
+}
+#home h1{
+    padding: 2.5rem;
+    margin-top: 11rem;
+    font-size: 3.6rem;
+    font-family: 'Great Vibes', cursive;
+
+}
+#music{
+    display: flex;
+    /* color: white; */
+}
+#music-container{
+    color: rgba(255, 255, 255, 0.815);
+}
+#home h2{
+    padding-bottom: 2rem;
+    font-size: 1.9rem;
+    padding-left: 4.7rem;
+    font-family: 'Parisienne', cursive;
+}
+.heading3{
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    margin-top: 14rem;
+    margin-bottom: 4rem;
+    font-size: 4.5rem;
+}
+.heading4{
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+#music-container p{
+    font-family: 'Marck Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.background img{
+    
+    height: 50%;
+    width: 50%;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    margin-left: 18rem;
+    padding: 3rem;
+    /* background-attachment: fixed; */
+}
+/* #para1{
+    padding-bottom:4rem ;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 7.7rem;
+} */
+
+#services{
+    display: flex;
+    flex-direction: row;
+}
+
+#services .box{
+    padding: 3rem;
+}
+#services .box h2{
+    padding-top:1rem ;
+    padding-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.651);
+    font-family: 'Parisienne', cursive;
+    text-align: center;
+}
+#services .box p{
+    color: rgba(255, 255, 255, 0.651);
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.35rem;
+    margin-bottom: 13rem;
+}
+#services .box img{
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) invert(1);
+    /* justify-content: center;
+    align-items: center; */
+    margin: auto;
+    display: block;
+}
+.para3{
+    color: rgba(255, 255, 255, 0.651);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Parisienne', cursive;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3rem; */
+    display: flex;
+    /* margin: auto; */
+}
+#back ::before{
+    background: url("/back4.jpg") no-repeat center center/cover;
+    content: "";
+    z-index: -1;    
+    width: 100%;
+    height: 65%;
+    left: 0;
+    background-attachment: fixed;
+    position: absolute;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39rem;
+    /* position: absolute; */
+}
+#heading5{
+    margin-top: 12rem;
+    text-align: center;
+    padding: 3rem 4rem;
+    font-size: 3.5rem;
+    font-family: 'Parisienne', cursive;
+    color: rgba(255, 255, 255, 0.651);
+}
+#info{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Parisienne', cursive;
+    padding-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.651);
+}
+#contact-box input,
+#contact-box textarea{
+    padding: 0.6rem;
+    margin-left: 33rem;
+    width: 18rem;
+}
+#contact-box ::placeholder{
+    font-size: 1.3rem;
+    font-family: 'Marck Script', cursive;
+    
+}
+.form-group{
+    padding: 0.5rem;
+    width: 2rem;
+}
+.btn1{
+    /* border-radius: 0.3rem; */
+    /* padding-top:1.5rem ; */
+    /* margin-top: 2rem; */
+    /* font-size: 1.1rem; */
+    background-color: rgba(252, 0, 0, 0.486);
+    color: whitesmoke;
+    height: 2.5rem;
+    width: 7rem;
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+
+    padding: 6px 20px;
+    /* border: 2px solid #ffffffc7; */
+    /* background-color: #2f2a2ac2; */
+    /* color: white ; */
+    margin: 40px;
+    font-size: 0.9rem;
+    /* font-family: 'Courgette', cursive; */
+    /* border-radius: 10px; */
+}
+.btn1 :hover{
+    color: black;
+    background-color: rgb(8, 5, 5);
+}
+.btn2{
+    margin-left: 34rem;
+    height: 2.5rem;
+    width: 7rem;
+    font-weight: bold;
+    font-family: 'Parisienne', cursive;
+    font-size: 1.1rem;
+    /* padding: 1rem; */
+    margin-bottom:2rem ;
+    background-color: rgb(39, 34, 34);
+    color: whitesmoke;
+    /* padding-left: 3rem; */
+}
+footer{
+    background-color: black;
+    color: whitesmoke;
+    /* height: 80%; */
+    width: 100%;
+}
+footer .center{
+    text-align: center;
+    height: 9rem;
+    padding-top: 8rem;
+    /* margin-top: 9rem; */
+}
