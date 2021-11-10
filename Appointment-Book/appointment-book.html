@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Staff Login</title>
+    <title>JavaScript Form Validation</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -15,25 +15,38 @@
   <body>
     <div class="container">
       <div class="header">
-        <h2>Staff Login</h2>
+        <h2>Book an Appointment</h2>
       </div>
       <form class="form" id="form">
         <div class="form-control">
-          <label for="user-id">User ID</label>
-          <input type="text" id="user-id" placeholder="Enter user-id" />
+          <label for="patientname">Name</label>
+          <input type="text" id="patientname" placeholder="Enter your name" />
           <i class="fa fa-check-circle"></i>
           <i class="fa fa-exclamation-circle"></i>
           <small>Error Msg</small>
         </div>
 
         <div class="form-control">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter Password" />
+          <label for="phone">Phone No.</label>
+          <input type="text" id="phone" placeholder="Enter your phone no." />
           <i class="fa fa-check-circle"></i>
           <i class="fa fa-exclamation-circle"></i>
           <small>Error Msg</small>
         </div>
-        <button type="submit">Log In</button>
+
+        <div class="form-control">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            rows="6"
+            placeholder="Enter message"
+          ></textarea>
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
 

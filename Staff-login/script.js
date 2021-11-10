@@ -13,7 +13,7 @@ function checkInputs(){
 
     if( userIDValue ==='')
     {
-        showError(userID,"Username can not be blank");
+        showError(userID,"User-ID can not be blank");
     }
     else
     {
