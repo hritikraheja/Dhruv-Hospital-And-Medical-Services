@@ -1,101 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <title>Mac Music Gallery</title>
+    <title>Responsive horizontal Nav-bar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(0,138,212,255);
+        }
+        img{
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        header h2{
+            float: left;
+            color: antiquewhite;
+            line-height: 70px;
+            padding-left: 20px;
+            position: fixed;
+        }
+
+         header .menu {
+            float: left;
+            list-style: none;
+            margin-left: 115px;
+        }
+
+         .menu li{
+            display: inline-block;
+            line-height: 70px;
+        }
+
+         .menu li a{
+            text-decoration: none;
+            padding: 0 20px;
+            color: azure;
+            font-size: 20px;
+            text-transform: uppercase;
+            transition: .4s;
+        }
+
+        .show-btn, .hide-btn{
+            color: antiquewhite;
+            line-height: 70px;
+            font-size: 20px;
+            display: none;
+            transition: .4s;
+        }
+
+        #chk{
+            visibility: hidden;
+            position: absolute;
+            z-index: -10;
+        }
+
+        .show-btn{
+            float: right;
+        }
+
+        .fa{
+            margin-right: 5px;
+        }
+
+        .show-btn:hover, .hide-btn:hover, header ul li a:hover{
+            color: aquamarine;
+        }
+
+        .content{
+            display: flex;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            height: 70vh;
+            padding: 10px;
+            
+        }
+
+        @media(max-width: 800px){
+            .show-btn, .hide-btn{
+               display: block;
+               font-size: 30px;
+            }
+
+            .menu{
+                top: 0;
+                position: fixed;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                text-align: center;
+                padding: 80px 0;
+                transition: 0.7s;
+                line-height: normal;
+            }
+            
+            
+            #chk:checked ~ .menu{
+                right: 0;
+            }
+
+            .menu li{
+                display: block;
+               
+            }
+
+            .menu li a{
+                display: block;
+            }
+
+
+            .hide-btn{
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+            .content img{
+                width: 100%;
+                max-width: 700px;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            #img1{
+                width: 50%;
+            }
+            
+        }
+    </style>
 </head>
-
 <body>
-    <nav id="navbar">
-        <div id="logo">
-            <img src="logo.png" alt="">
-        </div>
-        <ul>
-            <li class="item"><a href="#home">Home</a></li>
-            <li class="item"><a href="#music-container">About Us</a></li>
-            <li class="item"><a href="#service-container">Service</a></li>
-            <li class="item"><a href="#back">Albums</a></li>
-            <li class="item"><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <img src="./Images/logo.jpg" alt="" style="float: left;">
+            <!-- <h2>Beta Labs</h2> -->
+            <input type="checkbox"  id="chk">
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">hggf</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+    
+            </ul>
 
-    <section id="home">
-        <h1 class="heading1">Enjoy with Mac</h1>
-        <h2 class="heading2">Music is the Universal Language of Mankind</h2>
-        <!-- <p id="para1">Listen Your Favourite Songs Without Interruption</p> -->
-        <button class="btn1">Listen Now</button>
-    </section>
-    <section id="music-container">
-        <h1 class="heading3"><img src="./logo2.png" alt="">Music</h1>
-        <!-- <div id="logo2">
-            <img src="logo2.png" alt="">
-        </div> -->
-        <h1 class="heading4">45 Million Songs Zero ads</h1>
-        <div class="music">
-            <p>Stream over 45 million songs, ad-free. Or download albums and tracks to listen to offline. All the music in your personal Mac Music library — no matter where it came from — lives right alongside the Orange Music catalog. Start your free three-month
-                trial with no commitment, and cancel anytime.</p>
-        </div>
-        <div class="background">
-            <img src="/back3.jpg" alt="">
-        </div>
-    </section>
-    <section id="service-container">
-        <div id="services">
-            <div class="box">
-                <img src="img1.png" alt="">
-                <h2 class="heading5">Custom Player</h2>
-                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos id esse, mollitia hic fugit!</p>
-            </div>
-            <div class="box">
-                <img src="img3.png" alt="">
-                <h2 class="heading5">Music Playlist</h2>
-                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos id esse, mollitia hic fugit!</p>
-            </div>
-            <div class="box">
-                <img src="img2.png" alt="">
-                <h2 class="heading5">Unlimited Downloads</h2>
-                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos id esse, mollitia hic fugit!</p>
-            </div>
-        </div>
-    </section>
-    <section id="back">
-        <p class="para3">A world of entertainment. Available wherever you are.</p>
-    </section>
-    <section id="contact">
-        <h1 id="heading5">Contact us</h1>
-        <h3 id="info">Feel free to get in Touch!</h3>
-        <div id="contact-box">
-            <form action="">
-                <div class="form-group">
-                    <input type="text" name="name" id="name" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="name" id="email" placeholder="E-mail">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="name" id="subject" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea name="Message" id="message" rows="10" cols="30" placeholder="Message"></textarea>
-                </div>
-                <button class="btn2">Submit</button>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <div class="center">
-            Copyright &copy; 2021 Mac Store
-        </div>
-    </footer>
+            <ul style="float: right;">
+                <li style="list-style: none; line-height: 70px; font-size: 20px; margin-right: 25px;"><a href="#" style="color: rgb(243, 230, 230); text-decoration: none;"><i class="fa fa-address-book"></i>Staff Login</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <div class="content">
+        <h1 style="width: 50%; text-align: center; margin-top: auto; margin-bottom: auto;">Dhruv Hospital And Medical Services</h1>
+        <img src="./Images/backImage.jpg" alt="" style="width: 50%; height: auto; margin: 10px; float: right;">
+    </div>
+    <div class="para">
+        
+    </div>
 </body>
-
 </html>

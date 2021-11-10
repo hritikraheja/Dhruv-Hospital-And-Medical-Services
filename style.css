@@ -1,13 +1,14 @@
 *{
     margin: 0rem;
     padding: 0rem;
+   
 }
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: rgb(24, 23, 23);
+    background-color: rgb(231, 225, 225);
     
 }
 :root{
@@ -41,11 +42,12 @@ ul{
     display: flex;
     align-items: center;
     top: 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
 }
 #navbar::before{
     position: absolute;
-    background-color: rgb(46, 43, 43);
+    background-color: rgb(224, 20, 20);
     content: "";
     top: 0rem;
     left: 0rem;
@@ -69,7 +71,7 @@ ul{
     display: block;
     color: rgba(255, 255, 255, 0.651);
     text-decoration: none;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #navbar ul li a:hover{
     color: black;
@@ -89,7 +91,7 @@ ul{
     color: rgba(255, 255, 255, 0.815);
 }
 #home::before{
-    background: url("/back.jpg") no-repeat center center/cover;
+    background: url() no-repeat center center/cover;
     content: "";
     z-index: -1;
     height: 100%;
@@ -104,7 +106,7 @@ ul{
     padding: 2.5rem;
     margin-top: 11rem;
     font-size: 3.6rem;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 #music{
@@ -118,17 +120,17 @@ ul{
     padding-bottom: 2rem;
     font-size: 1.9rem;
     padding-left: 4.7rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .heading3{
     text-align: center;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 14rem;
     margin-bottom: 4rem;
     font-size: 4.5rem;
 }
 .heading4{
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -137,7 +139,7 @@ ul{
     padding-bottom: 2rem;
 }
 #music-container p{
-    font-family: 'Marck Script', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 1.8rem;
@@ -172,13 +174,13 @@ ul{
     padding-top:1rem ;
     padding-bottom: 1rem;
     color: rgba(255, 255, 255, 0.651);
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
 #services .box p{
     color: rgba(255, 255, 255, 0.651);
     text-align: center;
-    font-family: 'Marck Script', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.35rem;
     margin-bottom: 13rem;
 }
@@ -195,7 +197,7 @@ ul{
     color: rgba(255, 255, 255, 0.651);
     text-align: center;
     font-size: 3.5rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     align-items: center;
     /* margin-top: 3rem; */
@@ -224,13 +226,13 @@ ul{
     text-align: center;
     padding: 3rem 4rem;
     font-size: 3.5rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgba(255, 255, 255, 0.651);
 }
 #info{
     text-align: center;
     font-size: 2rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 2rem;
     color: rgba(255, 255, 255, 0.651);
 }
@@ -242,7 +244,7 @@ ul{
 }
 #contact-box ::placeholder{
     font-size: 1.3rem;
-    font-family: 'Marck Script', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 }
 .form-group{
