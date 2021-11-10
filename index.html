@@ -1,179 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive horizontal Nav-bar</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        height: 70px;
+        /* background-color: rgb(0,138,212,255); */
+        background-color: brown;
+      }
+      img {
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
 
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            /* background-color: rgb(0,138,212,255); */
-            background-color: brown;
-        }
-        img{
-            height: 50px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
+      header h2 {
+        float: left;
+        color: antiquewhite;
+        line-height: 70px;
+        padding-left: 20px;
+        position: fixed;
+      }
 
-        header h2{
-            float: left;
-            color: antiquewhite;
-            line-height: 70px;
-            padding-left: 20px;
-            position: fixed;
-        }
+      header .menu {
+        float: left;
+        list-style: none;
+        margin-left: 115px;
+      }
 
-         header .menu {
-            float: left;
-            list-style: none;
-            margin-left: 115px;
-        }
+      .menu li {
+        display: inline-block;
+        line-height: 70px;
+      }
 
-         .menu li{
-            display: inline-block;
-            line-height: 70px;
-        }
+      .menu li a {
+        text-decoration: none;
+        padding: 0 20px;
+        color: azure;
+        font-size: 20px;
+        text-transform: uppercase;
+        transition: 0.4s;
+      }
 
-         .menu li a{
-            text-decoration: none;
-            padding: 0 20px;
-            color: azure;
-            font-size: 20px;
-            text-transform: uppercase;
-            transition: .4s;
-        }
+      .show-btn,
+      .hide-btn {
+        color: antiquewhite;
+        line-height: 70px;
+        font-size: 20px;
+        display: none;
+        transition: 0.4s;
+      }
 
-        .show-btn, .hide-btn{
-            color: antiquewhite;
-            line-height: 70px;
-            font-size: 20px;
-            display: none;
-            transition: .4s;
-        }
+      #chk {
+        visibility: hidden;
+        position: absolute;
+        z-index: -10;
+      }
 
-        #chk{
-            visibility: hidden;
-            position: absolute;
-            z-index: -10;
-        }
+      .show-btn {
+        float: right;
+      }
 
-        .show-btn{
-            float: right;
-        }
+      .fa {
+        margin-right: 5px;
+      }
 
-        .fa{
-            margin-right: 5px;
-        }
+      .show-btn:hover,
+      .hide-btn:hover,
+      header ul li a:hover {
+        color: aquamarine;
+      }
 
-        .show-btn:hover, .hide-btn:hover, header ul li a:hover{
-            color: aquamarine;
-        }
+      .content {
+        display: flex;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        height: 70vh;
+        padding: 10px;
+      }
 
-        .content{
-            display: flex;
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-            height: 70vh;
-            padding: 10px;
-        }
-
-        .para{
-            height: auto;
-            width: 100%;
-            background-color:brown;
-            }
-
-        #paraHeading{
-            text-align: center;
-            font-size: 2em;
-            color: #FFF;
-            font-family: 'Times New Roman', Times, serif;
-            padding: 30px;
-        }
-
-        #paraText{
-            text-align: justify;
-            font-size: 1.2em;
-            color: #FFF;
-            font-family: cursive;
-            padding: 30px;
-        }
-
-        .overviewImage{
-            display: block;
-            width: 95%;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 30px;
-            background-color: antiquewhite;
-        }
-
-        .facilities{
-            display: flex;
-            width: 90%;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 30px;
-        }
-
-        .card{
-            width: 25%;
-            height: auto;
-            background-color: white;
-            border-width: 5px;
-            border-radius: 20px;
-            border: 2px solid black;
-            margin: 20px;
-        }
-    
-        #fNumber{
-            font-size: 5em;
-            text-align: center;
-            color: brown;
-            margin-top: 20px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        #fHeading{
-            font-size: 1.5em;
-            text-align: center;
-            color: #000;
-            margin: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #fDescription{
-            font-size: 0.8em;
-            text-align: justify;
-            color: #000;
-            font-family: cursive;
-            margin: 20px;
-        }
-
-        .quoteImage{
-            display: block;
-            width: 80%;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        footer {
+      .para {
+        height: auto;
         width: 100%;
         background-color: brown;
-        border-top :1px solid white;
+      }
+
+      #paraHeading {
+        text-align: center;
+        font-size: 2em;
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+        padding: 30px;
+      }
+
+      #paraText {
+        text-align: justify;
+        font-size: 1.2em;
+        color: #fff;
+        font-family: cursive;
+        padding: 30px;
+      }
+
+      .overviewImage {
+        display: block;
+        width: 95%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background-color: antiquewhite;
+      }
+
+      .facilities {
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        width: 25%;
+        height: auto;
+        background-color: white;
+        border-width: 5px;
+        border-radius: 20px;
+        border: 2px solid black;
+        margin: 20px;
+      }
+
+      #fNumber {
+        font-size: 5em;
+        text-align: center;
+        color: brown;
+        margin-top: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      #fHeading {
+        font-size: 1.5em;
+        text-align: center;
+        color: #000;
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #fDescription {
+        font-size: 0.8em;
+        text-align: justify;
+        color: #000;
+        font-family: cursive;
+        margin: 20px;
+      }
+
+      .quoteImage {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      footer {
+        width: 100%;
+        background-color: brown;
+        border-top: 1px solid white;
       }
       .main-content {
         display: flex;
@@ -368,206 +373,244 @@
         }
       }
 
-        @media(max-width: 800px){
-            .show-btn, .hide-btn{
-               display: block;
-               font-size: 30px;
-            }
-
-            .menu{
-                top: 0;
-                position: fixed;
-                right: -100%;
-                width: 100%;
-                height: 100vh;
-                background-color: black;
-                text-align: center;
-                padding: 80px 0;
-                transition: 0.7s;
-                line-height: normal;
-            }
-            
-            
-            #chk:checked ~ .menu{
-                right: 0;
-            }
-
-            .menu li{
-                display: block;
-               
-            }
-
-            .menu li a{
-                display: block;
-            }
-
-
-            .hide-btn{
-                position: absolute;
-                right: 20px;
-                top: 10px;
-            }
-
-            .content img{
-                width: 100%;
-                max-width: 700px;
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            #img1{
-                width: 50%;
-            }
+      @media (max-width: 800px) {
+        .show-btn,
+        .hide-btn {
+          display: block;
+          font-size: 30px;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="./Images/logo.jpg" alt="" style="float: left;">
-            <!-- <h2>Beta Labs</h2> -->
-            <input type="checkbox"  id="chk">
-            <label for="chk" class="show-btn">
-                <i class="fa fa-bars"></i>
-            </label>
-            
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">hggf</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                
-                <label for="chk" class="hide-btn">
-                    <i class="fa fa-times"></i>
-                </label>
-    
-            </ul>
 
-            <ul style="float: right;">
-                <li style="list-style: none; line-height: 70px; font-size: 20px; margin-right: 25px;"><a href="#" style="color: rgb(243, 230, 230); text-decoration: none;"><i class="fa fa-address-book"></i>Staff Login</a></li>
-            </ul>
-            
-        </nav>
+        .menu {
+          top: 0;
+          position: fixed;
+          right: -100%;
+          width: 100%;
+          height: 100vh;
+          background-color: black;
+          text-align: center;
+          padding: 80px 0;
+          transition: 0.7s;
+          line-height: normal;
+        }
+
+        #chk:checked ~ .menu {
+          right: 0;
+        }
+
+        .menu li {
+          display: block;
+        }
+
+        .menu li a {
+          display: block;
+        }
+
+        .hide-btn {
+          position: absolute;
+          right: 20px;
+          top: 10px;
+        }
+
+        .content img {
+          width: 100%;
+          max-width: 700px;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        #img1 {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./Images/logo.jpg" alt="" style="float: left" />
+        <!-- <h2>Beta Labs</h2> -->
+        <input type="checkbox" id="chk" />
+        <label for="chk" class="show-btn">
+          <i class="fa fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">hggf</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+
+          <label for="chk" class="hide-btn">
+            <i class="fa fa-times"></i>
+          </label>
+        </ul>
+
+        <ul style="float: right">
+          <li
+            style="
+              list-style: none;
+              line-height: 70px;
+              font-size: 20px;
+              margin-right: 25px;
+            "
+          >
+            <a href="#" style="color: rgb(243, 230, 230); text-decoration: none"
+              ><i class="fa fa-address-book"></i> Staff Login</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="content">
-        <h1 style="width: 50%; text-align: center; margin-top: auto; margin-bottom: auto;font-size: 3.5em;">Dhruv Hospital And Medical Services</h1>
-        <img src="./Images/backImage.jpg" alt="" style="width: 50%; height: auto; margin: 10px; float: right;">
+      <h1
+        style="
+          width: 50%;
+          text-align: center;
+          margin-top: auto;
+          margin-bottom: auto;
+          font-size: 3.5em;
+        "
+      >
+        Dhruv Hospital And Medical Services
+      </h1>
+      <img
+        src="./Images/backImage.jpg"
+        alt=""
+        style="width: 50%; height: auto; margin: 10px; float: right"
+      />
     </div>
     <div class="para">
-        <p id="paraHeading"><b><i>OVERVIEW</i></b></p>
-        <p id="paraText">Dhruv hospital is a newly opened hospital having a multi structured building, with all proper equipments and well trained staff for treatment and care of newborns and infants. A hospital like home and will provide you comfort and support at the time you need them the most. One of the best hospital in the city, focussed on the following prime principles:</p>
-        <ol id="paraText" style="margin-left: 30px;">
-            <li>Patient-Centric Approach</li>
-            <li>Focused Leadership</li>
-            <li>Cutting-Edge Technology</li>
-            <li>Transparent Pricing</li>
-            <li>Coordinated Care</li>
-        </ol>
-        <img src="./Images/hospitalImage.jpg" class="overviewImage">
-        <p id="paraHeading">SOME SALIENT FACILITIES</p>
-        <div class="facilities">
-            <div class="card">
-                <p id="fNumber">1</p>
-                <p id="fHeading">Level-2 NICU</p>
-                <p id="fDescription">Especially design 2- Level NICU for new born baby with nenocat machines with proper equipements with proper trained staff.</p>
-            </div>
-            <div class="card">
-                <p id="fNumber">2</p>
-                <p id="fHeading">Phototherapy Machine</p>
-                <p id="fDescription">Phototherapy machines was also there in the hospital with only advanced technologies.</p>
-            </div>
-            <div class="card">
-                <p id="fNumber">3</p>
-                <p id="fHeading">C PAP Machines</p>
-                <p id="fDescription">Contionous(C PAP) machine is the most commonly prescribed device for treating sleep disorders.</p>
-            </div>
-            <div class="card">
-                <p id="fNumber">4</p>
-                <p id="fHeading">OPD Centers Present</p>
-                <p id="fDescription">Operation centers OPD centers with proper well trained staff is also there with proper equipments there onlu in Civil Hospital palwal.</p>
-            </div>
+      <p id="paraHeading">
+        <b><i>OVERVIEW</i></b>
+      </p>
+      <p id="paraText">
+        Dhruv hospital is a newly opened hospital having a multi structured
+        building, with all proper equipments and well trained staff for
+        treatment and care of newborns and infants. A hospital like home and
+        will provide you comfort and support at the time you need them the most.
+        One of the best hospital in the city, focussed on the following prime
+        principles:
+      </p>
+      <ol id="paraText" style="margin-left: 30px">
+        <li>Patient-Centric Approach</li>
+        <li>Focused Leadership</li>
+        <li>Cutting-Edge Technology</li>
+        <li>Transparent Pricing</li>
+        <li>Coordinated Care</li>
+      </ol>
+      <img src="./Images/hospitalImage.jpg" class="overviewImage" />
+      <p id="paraHeading">SOME SALIENT FACILITIES</p>
+      <div class="facilities">
+        <div class="card">
+          <p id="fNumber">1</p>
+          <p id="fHeading">Level-2 NICU</p>
+          <p id="fDescription">
+            Especially design 2- Level NICU for new born baby with nenocat
+            machines with proper equipements with proper trained staff.
+          </p>
         </div>
-        <img src="./Images/mahatmagandhi.png" class="quoteImage">
+        <div class="card">
+          <p id="fNumber">2</p>
+          <p id="fHeading">Phototherapy Machine</p>
+          <p id="fDescription">
+            Phototherapy machines was also there in the hospital with only
+            advanced technologies.
+          </p>
+        </div>
+        <div class="card">
+          <p id="fNumber">3</p>
+          <p id="fHeading">C PAP Machines</p>
+          <p id="fDescription">
+            Contionous(C PAP) machine is the most commonly prescribed device for
+            treating sleep disorders.
+          </p>
+        </div>
+        <div class="card">
+          <p id="fNumber">4</p>
+          <p id="fHeading">OPD Centers Present</p>
+          <p id="fDescription">
+            Operation centers OPD centers with proper well trained staff is also
+            there with proper equipments there onlu in Civil Hospital palwal.
+          </p>
+        </div>
+      </div>
+      <img src="./Images/mahatmagandhi.png" class="quoteImage" />
     </div>
     <footer>
-        <section class="main-content">
-          <section class="about">
-            <h2>DHRUV HOSPITAL</h2>
-            <p>
-              A newly designed multistructed building having all the proper equipments with a proper training staff
-              for newly born  and infants childrens and treatement for any kind of diseases.
-            </p>
-          </section>
-          <section class="link">
-            <h2>Pateint services </h2>
-            <ul>
-              <li><a href="#">Cafeteria</a></li>
-              <li><a href="#">Pharmacy</a></li>
-              <li><a href="#">Medical Store</a></li>
-              <li><a href="#">Ambulance</a></li>
-              <li><a href="#">Private-Ward</a></li>
-            </ul>
-          </section>
-          <section class="link">
-            <h2>Homecare services</h2>
-            <ul>
-              <li><a href="#">On Phone Consulation</a></li>
-              <li><a href="#">Home visit Consulation</a></li>
-              <li><a href="#">24/7 Ambulance Services</a></li>
-              <li><a href="#">Home delieverd Medicines</a></li>
-            </ul>
-          </section>
-          <section class="link">
-            <h2>Contact Us</h2>
-            <ul>
-              <li>
-                <a href="#"
-                  ><i class="fa fa-home"></i><span> Dr. Sanjay Singla</span></a
-                >
-              </li>
-              <li>
-                <i class="fa fa-envelope"></i
-                ><span> sanjaysingla125@gmail.com</span>
-              </li>
-              <li>
-                <i class="fa fa-phone-square"></i><span> Mobile: +91 9350367618</span>
-              </li>
-            </ul>
-          </section>
+      <section class="main-content">
+        <section class="about">
+          <h2>DHRUV HOSPITAL</h2>
+          <p>
+            A newly designed multistructed building having all the proper
+            equipments with a proper training staff for newly born and infants
+            childrens and treatement for any kind of diseases.
+          </p>
         </section>
-        <section class="form">
-          <p>Book an appointment</p>
-          <a href="#">Book now!</a>
+        <section class="link">
+          <h2>Pateint services</h2>
+          <ul>
+            <li><a href="#">Cafeteria</a></li>
+            <li><a href="#">Pharmacy</a></li>
+            <li><a href="#">Medical Store</a></li>
+            <li><a href="#">Ambulance</a></li>
+            <li><a href="#">Private-Ward</a></li>
+          </ul>
         </section>
-        <section class="social">
+        <section class="link">
+          <h2>Homecare services</h2>
+          <ul>
+            <li><a href="#">On Phone Consulation</a></li>
+            <li><a href="#">Home visit Consulation</a></li>
+            <li><a href="#">24/7 Ambulance Services</a></li>
+            <li><a href="#">Home delieverd Medicines</a></li>
+          </ul>
+        </section>
+        <section class="link">
+          <h2>Contact Us</h2>
           <ul>
             <li>
               <a href="#"
-                ><i class="fa fa-facebook"></i
-              ></a>
+                ><i class="fa fa-home"></i><span> Dr. Sanjay Singla</span></a
+              >
             </li>
             <li>
-              <a href="#"
-                ><i class="fa fa-github"></i
-              ></a>
+              <i class="fa fa-envelope"></i
+              ><span> sanjaysingla125@gmail.com</span>
             </li>
             <li>
-              <a href="#"><i class="fa fa-google"></i></a>
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fa fa-linkedin"></i
-              ></a>
+              <i class="fa fa-phone-square"></i
+              ><span> Mobile: +91 9350367618</span>
             </li>
           </ul>
         </section>
-        <section class="end">
-          <p>
-            Copyright © 2020 All Rights Reserved by
-            <a href="#">Dr. Sanjay Singla</a>.
-          </p>
-        </section>
-      </footer>
-</body>
+      </section>
+      <section class="form">
+        <p>Book an appointment</p>
+        <a href="#">Book now!</a>
+      </section>
+      <section class="social">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </section>
+      <section class="end">
+        <p>
+          Copyright © 2020 All Rights Reserved by
+          <a href="#">Dr. Sanjay Singla</a>.
+        </p>
+      </section>
+    </footer>
+  </body>
 </html>
