@@ -16,7 +16,8 @@
         header{
             width: 100%;
             height: 70px;
-            background-color: rgb(0,138,212,255);
+            /* background-color: rgb(0,138,212,255); */
+            background-color: brown;
         }
         img{
             height: 50px;
@@ -84,8 +85,288 @@
             background-color: rgb(255, 255, 255);
             height: 70vh;
             padding: 10px;
-            
         }
+
+        .para{
+            height: auto;
+            width: 100%;
+            background-color:brown;
+            }
+
+        #paraHeading{
+            text-align: center;
+            font-size: 2em;
+            color: #FFF;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 30px;
+        }
+
+        #paraText{
+            text-align: justify;
+            font-size: 1.2em;
+            color: #FFF;
+            font-family: cursive;
+            padding: 30px;
+        }
+
+        .overviewImage{
+            display: block;
+            width: 95%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            background-color: antiquewhite;
+        }
+
+        .facilities{
+            display: flex;
+            width: 90%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .card{
+            width: 25%;
+            height: auto;
+            background-color: white;
+            border-width: 5px;
+            border-radius: 20px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    
+        #fNumber{
+            font-size: 5em;
+            text-align: center;
+            color: brown;
+            margin-top: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #fHeading{
+            font-size: 1.5em;
+            text-align: center;
+            color: #000;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #fDescription{
+            font-size: 0.8em;
+            text-align: justify;
+            color: #000;
+            font-family: cursive;
+            margin: 20px;
+        }
+
+        .quoteImage{
+            display: block;
+            width: 80%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+        width: 100%;
+        background-color: brown;
+        border-top :1px solid white;
+      }
+      .main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px 10px;
+      }
+      .main-content h2 {
+        font-size: 20px;
+        color: whitesmoke;
+        text-transform: uppercase;
+      }
+      .main-content ul {
+        list-style: none;
+      }
+      .about {
+        width: 40%;
+        padding: 0 25px;
+      }
+      .about p {
+        text-align: justify;
+        color: whitesmoke;
+        margin-top: 15px;
+      }
+      .link {
+        padding: 0 15px;
+      }
+      .link h2 {
+        margin-bottom: 14px;
+      }
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a:hover {
+        color: orange;
+      }
+      a i {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a i:hover {
+        color: orange;
+      }
+      a span {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a span:hover {
+        color: orange;
+      }
+      span {
+        color: whitesmoke;
+      }
+      i {
+        color: whitesmoke;
+        font-size: 22px;
+        margin-right: 10px;
+      }
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .form p {
+        color: whitesmoke;
+        font-size: 25px;
+      }
+      .form a {
+        display: inline-block;
+        padding: 10px 25px;
+        color: white;
+        background-color: greenyellow;
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: 25px;
+      }
+      .form a:hover {
+        background-color: orange;
+      }
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .social ul {
+        list-style: none;
+      }
+      .social ul li {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        padding: 17.5px;
+        background-color: gray;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .social ul li i {
+        font-size: 25px;
+        line-height: 20px;
+      }
+      .social ul li:nth-child(1):hover {
+        background-color: #3b5999;
+      }
+      .social ul li:nth-child(2):hover {
+        background-color: black;
+      }
+      .social ul li:nth-child(3):hover {
+        background-color: #dd4b39;
+      }
+      .social ul li:nth-child(4):hover {
+        background-color: #0077b5;
+      }
+      .end {
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        /* height: 80px; */
+        padding: 15px;
+      }
+      @media (max-width: 900px) {
+        .main-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 30px 10px;
+          flex-wrap: wrap;
+        }
+        .main-content h2 {
+          font-size: 20px;
+          color: whitesmoke;
+          text-transform: uppercase;
+        }
+        .about {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .form {
+          padding: 20px;
+        }
+        .social {
+          padding: 20px 10px;
+        }
+        .social ul {
+          list-style: none;
+          margin: 20px;
+        }
+        .social ul li {
+          display: inline-block;
+          width: 55px;
+          height: 55px;
+          padding: 17.5px;
+          background-color: gray;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+      }
+      @media (max-width: 750px) {
+        .main-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 30px 10px;
+        }
+        .main-content h2 {
+          font-size: 20px;
+          color: whitesmoke;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+        .about {
+          width: 100%;
+        }
+        .social ul {
+          list-style: none;
+        }
+        .social ul li {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          background-color: gray;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
 
         @media(max-width: 800px){
             .show-btn, .hide-btn{
@@ -137,7 +418,6 @@
             #img1{
                 width: 50%;
             }
-            
         }
     </style>
 </head>
@@ -171,11 +451,123 @@
         </nav>
     </header>
     <div class="content">
-        <h1 style="width: 50%; text-align: center; margin-top: auto; margin-bottom: auto;">Dhruv Hospital And Medical Services</h1>
+        <h1 style="width: 50%; text-align: center; margin-top: auto; margin-bottom: auto;font-size: 3.5em;">Dhruv Hospital And Medical Services</h1>
         <img src="./Images/backImage.jpg" alt="" style="width: 50%; height: auto; margin: 10px; float: right;">
     </div>
     <div class="para">
-        
+        <p id="paraHeading"><b><i>OVERVIEW</i></b></p>
+        <p id="paraText">Dhruv hospital is a newly opened hospital having a multi structured building, with all proper equipments and well trained staff for treatment and care of newborns and infants. A hospital like home and will provide you comfort and support at the time you need them the most. One of the best hospital in the city, focussed on the following prime principles:</p>
+        <ol id="paraText" style="margin-left: 30px;">
+            <li>Patient-Centric Approach</li>
+            <li>Focused Leadership</li>
+            <li>Cutting-Edge Technology</li>
+            <li>Transparent Pricing</li>
+            <li>Coordinated Care</li>
+        </ol>
+        <img src="./Images/hospitalImage.jpg" class="overviewImage">
+        <p id="paraHeading">SOME SALIENT FACILITIES</p>
+        <div class="facilities">
+            <div class="card">
+                <p id="fNumber">1</p>
+                <p id="fHeading">Level-2 NICU</p>
+                <p id="fDescription">Especially design 2- Level NICU for new born baby with nenocat machines with proper equipements with proper trained staff.</p>
+            </div>
+            <div class="card">
+                <p id="fNumber">2</p>
+                <p id="fHeading">Phototherapy Machine</p>
+                <p id="fDescription">Phototherapy machines was also there in the hospital with only advanced technologies.</p>
+            </div>
+            <div class="card">
+                <p id="fNumber">3</p>
+                <p id="fHeading">C PAP Machines</p>
+                <p id="fDescription">Contionous(C PAP) machine is the most commonly prescribed device for treating sleep disorders.</p>
+            </div>
+            <div class="card">
+                <p id="fNumber">4</p>
+                <p id="fHeading">OPD Centers Present</p>
+                <p id="fDescription">Operation centers OPD centers with proper well trained staff is also there with proper equipments there onlu in Civil Hospital palwal.</p>
+            </div>
+        </div>
+        <img src="./Images/mahatmagandhi.png" class="quoteImage">
     </div>
+    <footer>
+        <section class="main-content">
+          <section class="about">
+            <h2>DHRUV HOSPITAL</h2>
+            <p>
+              A newly designed multistructed building having all the proper equipments with a proper training staff
+              for newly born  and infants childrens and treatement for any kind of diseases.
+            </p>
+          </section>
+          <section class="link">
+            <h2>Pateint services </h2>
+            <ul>
+              <li><a href="#">Cafeteria</a></li>
+              <li><a href="#">Pharmacy</a></li>
+              <li><a href="#">Medical Store</a></li>
+              <li><a href="#">Ambulance</a></li>
+              <li><a href="#">Private-Ward</a></li>
+            </ul>
+          </section>
+          <section class="link">
+            <h2>Homecare services</h2>
+            <ul>
+              <li><a href="#">On Phone Consulation</a></li>
+              <li><a href="#">Home visit Consulation</a></li>
+              <li><a href="#">24/7 Ambulance Services</a></li>
+              <li><a href="#">Home delieverd Medicines</a></li>
+            </ul>
+          </section>
+          <section class="link">
+            <h2>Contact Us</h2>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-home"></i><span> Dr. Sanjay Singla</span></a
+                >
+              </li>
+              <li>
+                <i class="fa fa-envelope"></i
+                ><span> sanjaysingla125@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa fa-phone-square"></i><span> Mobile: +91 9350367618</span>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="form">
+          <p>Book an appointment</p>
+          <a href="#">Book now!</a>
+        </section>
+        <section class="social">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </section>
+        <section class="end">
+          <p>
+            Copyright © 2020 All Rights Reserved by
+            <a href="#">Dr. Sanjay Singla</a>.
+          </p>
+        </section>
+      </footer>
 </body>
 </html>

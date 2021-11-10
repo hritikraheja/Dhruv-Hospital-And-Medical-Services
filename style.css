@@ -91,7 +91,7 @@ ul{
     color: rgba(255, 255, 255, 0.815);
 }
 #home::before{
-    background: url() no-repeat center center/cover;
+    background: url(./back.jpg) no-repeat center center/cover;
     content: "";
     z-index: -1;
     height: 100%;
