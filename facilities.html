@@ -12,7 +12,6 @@
       }
       .card {
         width: 20%;
-        float: left;
         background-color: white;
         height: 50%;
         margin: 10px 10px 10px 10px;
@@ -26,10 +25,36 @@
         width: 80%;
         border-radius: 10px;
       }
+      .content{
+        display: flex;
+      }
+
+      @media (max-width : 900px){
+        .content{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .card{
+          width: auto;
+          height: auto;
+        }
+      }
+      @media (max-width : 576px){
+        .content{
+          display: block;
+        }
+        .card{
+          width: 80%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
     </style>
   </head>
   <body>
     <h1 style="color: white; text-align: center">Facilities Provided</h1>
+    <div class="content">
     <div class="card">
       <img src="./Images/nic1.jpg" alt="" />
       <h2>2 level NICU</h2>
@@ -62,5 +87,6 @@
         there with proper equipments there onlu in Civil Hospital palwal
       </h4>
     </div>
+  </div>
   </body>
 </html>
